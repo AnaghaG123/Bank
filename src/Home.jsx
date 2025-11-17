@@ -146,12 +146,47 @@ const debitAmount = async (id, currentBalance,name,accNo) => {
   return (
     <>
 
-        <div className="container bg-dark p-5">
+        <div className="container p-5" style={{
+    background: "linear-gradient(135deg, #1f1c2c, #928dab)", 
+    minHeight: "100vh",
+    borderRadius: "12px",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
+  }}>
             <h1 className='text-light text-center'>BANK MANAGEMENT</h1>
             <div className='d-md-flex justify-content-center align-items-center p-5 gap-5 text-sm-center'>
-                <input onChange={(e)=>setInputAccNo(e.target.value)} type="text" placeholder='Account Number'value={inputAccNo}/>
-                <input onChange={(e)=>setInputName(e.target.value)} type="text" placeholder='Name' value={inputName}/>
-                <input onChange={(e)=>setInputAmount(e.target.value)} type="text" placeholder='Amount' value={inputAmount} disabled={editId!=null}/>
+                <input style={{
+                height: "45px",
+                width: "100%",
+                maxWidth: "400px",
+                borderRadius: "8px",
+                border: "1px solid #ccc",
+                padding: "10px",
+                fontSize: "16px",
+                outline: "none",
+                transition: "0.2s",
+  }} onChange={(e)=>setInputAccNo(e.target.value)} type="text" placeholder='Account Number'value={inputAccNo}/>
+                <input style={{
+                height: "45px",
+                width: "100%",
+                maxWidth: "400px",
+                borderRadius: "8px",
+                border: "1px solid #ccc",
+                padding: "10px",
+                fontSize: "16px",
+                outline: "none",
+                transition: "0.2s",
+  }} onChange={(e)=>setInputName(e.target.value)} type="text" placeholder='Name' value={inputName}/>
+                <input style={{
+                height: "45px",
+                width: "100%",
+                maxWidth: "400px",
+                borderRadius: "8px",
+                border: "1px solid #ccc",
+                padding: "10px",
+                fontSize: "16px",
+                outline: "none",
+                transition: "0.2s",
+  }} onChange={(e)=>setInputAmount(e.target.value)} type="text" placeholder='Amount' value={inputAmount} disabled={editId!=null}/>
             </div>
             {
               editId? <div className='text-center p-5'><button onClick={editClick} className='btn btn-warning'>Edit</button></div> :<div className='text-center p-5'><button onClick={onAddClick} className='btn btn-warning'>Add</button></div>
