@@ -1,17 +1,17 @@
 import axiosConfig from "./axiosConfig";
-
+import { BaseURL } from "./baseUrl";
 export const createBank = async (reqBody) =>{
-    return await axiosConfig("Post","http://localhost:3000/bank",reqBody)
+    return await axiosConfig("Post",`${BaseURL}/bank`,reqBody)
 }
 
 export const getBank = async ()=>{
-    return await axiosConfig("Get","http://localhost:3000/bank","")
+    return await axiosConfig("Get",`${BaseURL}/bank`,"")
 }
 
 export const deleteBank=async (id)=>{
-    return await axiosConfig("Delete",`http://localhost:3000/bank/${id}`,{})
+    return await axiosConfig("Delete",`${BaseURL}/bank/${id}`,{})
 }
 
 export const editBank = async(id,reqBody)=>{
-    return await axiosConfig("Put",`http://localhost:3000/bank/${id}`,reqBody)
+    return await axiosConfig("Put",`${BaseURL}/bank/${id}`,reqBody)
 }
