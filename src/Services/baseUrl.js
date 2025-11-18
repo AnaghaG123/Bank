@@ -1,1 +1,1 @@
-export const BaseURL = 'https://bankserver-5yb9.onrender.com'
+export const BaseURL = "https://bankserver-5yb9.onrender.com";
