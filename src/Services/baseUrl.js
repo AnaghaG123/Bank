@@ -1,1 +1,1 @@
-export const BaseURL = 'http://localhost:3000'
+export const BaseURL = 'https://bankserver-5yb9.onrender.com'
